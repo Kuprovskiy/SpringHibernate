@@ -31,10 +31,6 @@ public class CategoryPMSController {
 	@ResponseBody
 	public CategoryPMS getCategory(@PathVariable long id) {
 		LOGGER.info("Start getCategory.");
-		CategoryPMS categoryPMS = new CategoryPMS();
-		categoryPMS.setCategoryName("test");
-		categoryPMS.setLevel(1);
-		//return categoryPMS;
 		return categoryPMSService.findById(id);
 	}
 	
